@@ -1,25 +1,17 @@
-import java.util.Date;
+import model.Doctor;
+import model.Patient;
+import model.User;
 
-import static ui.UIMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-
-        Doctor myDoctor = new Doctor("Anahí Salgado", "anahi@anahi.com");
-        myDoctor.addAvailableAppointment(new Date(), "4pm");
-        myDoctor.addAvailableAppointment(new Date(), "10am");
-        myDoctor.addAvailableAppointment(new Date(), "1pm");
-
-        System.out.println(myDoctor);
-
-
-        System.out.println();
-        System.out.println();
-        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-        System.out.println(patient);
-
+        User user1=new User("simon","simon20") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor");
+                System.out.println("Hospital: raro");
+            }
+        };
     }
-
-
-
 }
